@@ -26,3 +26,26 @@ if filename != "":
 
     #ワークブックを保存する
     wb.save(filename)
+
+#作成したファイルを読み込む
+wb = openpyxl.load_workbook(filename)
+
+#プロパティのタイトルを設定する
+wb.properties.title = "プログラムの起動確認"
+
+#プロパティの件名を設定する
+wb.properties.subject = "property.pyの起動確認"
+
+#プロパティのタグを設定する
+wb.properties.keywords = "Python"
+
+#プロパティのコメントを設定する
+wb.properties.description = "Pythonのプログラムで作成したファイルです"
+
+#プロパティの作成者を設定する
+wb.properties.creator = "セント"
+
+#プロパティの前回保存者を設定する
+wb.properties.lastModifiedBy = "セント"
+
+wb.save(filename)
